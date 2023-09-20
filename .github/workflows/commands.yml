@@ -1,0 +1,12 @@
+name: Actions Commands
+
+on: [push]
+
+jobs:
+  actions-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setting an error message
+        run: echo "::error::Missing semicolon"
+      - name: setting an error message with params
+        run: echo "::error title=Error,file=app.js,line=2,endLine=3,col=1,endcolumn=2::Missing semicolon"
